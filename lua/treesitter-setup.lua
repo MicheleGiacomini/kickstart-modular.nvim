@@ -15,7 +15,7 @@ vim.defer_fn(function()
     -- You can specify additional Treesitter modules here: -- For example: -- playground = {--enable = true,-- },
     modules = {},
     highlight = { enable = true },
-    indent = { enable = true },
+    indent = { enable = true, disable = {'dart'}},
     incremental_selection = {
       enable = true,
       keymaps = {
