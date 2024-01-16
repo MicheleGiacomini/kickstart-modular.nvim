@@ -135,4 +135,9 @@ vim.keymap.set('n', '<leader>sG', ':LiveGrepGitRoot<cr>', { desc = '[S]earch by 
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
 
+-- [[Trouble]]
+vim.keymap.set("n", "<leader>ct", function() require("trouble").toggle() end, {desc = "Toggle [t]roble"})
+-- vim.keymap.set("n", "<leader>cw", function() require("trouble").toggle("workspace_diagnostics") end, {desc = "toggle [w]orkspace diagnostic" })
+vim.keymap.set("n", "<leader>cb", function() require("trouble").toggle("document_diagnostics") end, {desc = "toggle [b]uffer diagnostic"})
+
 -- vim: ts=2 sts=2 sw=2 et
