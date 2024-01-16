@@ -1,8 +1,12 @@
+-- Scala language server
+
+
 return {
     "scalameta/nvim-metals",
     dependencies = {
       "nvim-lua/plenary.nvim",
       {
+      -- TODO: Move this to its own plugin file with config for all the languages I need
         "mfussenegger/nvim-dap",
         config = function(self, opts)
           -- Debug settings if you're using nvim-dap

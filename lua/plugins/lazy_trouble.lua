@@ -1,3 +1,6 @@
+-- NOTE: diagnostic list w/ jump-to functionality
+
+
 return {
  "folke/trouble.nvim",
  dependencies = { "nvim-tree/nvim-web-devicons" },

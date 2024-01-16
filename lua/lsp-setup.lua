@@ -126,10 +126,12 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 -- [[DartLS]]
-    require("flutter-tools").setup {
-      capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities),
-      lsp = {on_attach= on_attach}
-    }
+require("flutter-tools").setup {
+  lsp = { on_attach = on_attach,
+    capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities),
+    settings = {
+      showTodos = false, } }
+}
 
 -- vim.api.nvim_create_autocmd("FileType", {
 --   pattern = { "dart" },

@@ -31,6 +31,8 @@ vim.keymap.set('n', ']e', function(opts)
     opts.severity = {min=vim.diagnostic.severity.ERROR}
     vim.diagnostic.goto_next(opts)
   end, { desc = 'Go to next error message' })
+vim.keymap.set("n", "]t", function() require("todo-comments").jump_next() end, {desc = "Go to next TODO"})
+vim.keymap.set("n", "]t", function() require("todo-comments").jump_prev() end, {desc = "Go to next TODO"})
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
@@ -134,10 +136,14 @@ vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc
 vim.keymap.set('n', '<leader>sG', ':LiveGrepGitRoot<cr>', { desc = '[S]earch by [G]rep on Git Root' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
+vim.keymap.set('n', '<leader>st', ":TodoTelescope<CR>", { desc = '[S]earch [t]odo' })
 
 -- [[Trouble]]
-vim.keymap.set("n", "<leader>ct", function() require("trouble").toggle() end, {desc = "Toggle [t]roble"})
--- vim.keymap.set("n", "<leader>cw", function() require("trouble").toggle("workspace_diagnostics") end, {desc = "toggle [w]orkspace diagnostic" })
-vim.keymap.set("n", "<leader>cb", function() require("trouble").toggle("document_diagnostics") end, {desc = "toggle [b]uffer diagnostic"})
+vim.keymap.set("n", "<leader>td", function() require("trouble").toggle() end, {desc = "[d]iagnostics"})
+vim.keymap.set("n", "<leader>tw", function() require("trouble").toggle("workspace_diagnostics") end, {desc = "[w]orkspace diagnostic" })
+vim.keymap.set("n", "<leader>tt", ":TodoTrouble<CR>", {desc = "[d]iagnostics"})
+
+-- [[UndoTree]]
+vim.keymap.set("n", "<leader>tu", ":UndotreeToggle<CR>", {desc = "[u]ndotree"})
 
 -- vim: ts=2 sts=2 sw=2 et

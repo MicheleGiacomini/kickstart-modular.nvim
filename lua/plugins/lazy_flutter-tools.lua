@@ -1,3 +1,5 @@
+-- NOTE: tools to handle Dart/Flutter projects, including language server
+
 return {
     'akinsho/flutter-tools.nvim',
     lazy = false,
