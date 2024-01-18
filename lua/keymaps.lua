@@ -141,7 +141,7 @@ vim.keymap.set('n', '<leader>st', ":TodoTelescope<CR>", { desc = '[S]earch [t]od
 -- [[Trouble]]
 vim.keymap.set("n", "<leader>td", function() require("trouble").toggle() end, {desc = "[d]iagnostics"})
 vim.keymap.set("n", "<leader>tw", function() require("trouble").toggle("workspace_diagnostics") end, {desc = "[w]orkspace diagnostic" })
-vim.keymap.set("n", "<leader>tt", ":TodoTrouble<CR>", {desc = "[d]iagnostics"})
+vim.keymap.set("n", "<leader>tt", ":TodoTrouble<CR>", {desc = "[t]odo"})
 
 -- [[UndoTree]]
 vim.keymap.set("n", "<leader>tu", ":UndotreeToggle<CR>", {desc = "[u]ndotree"})
